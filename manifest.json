@@ -1,0 +1,21 @@
+{
+  "name": "My Chrome Helpers",
+  "manifest_version": 2,
+  "version": "0.1",
+  "content_scripts": [{
+    "matches": ["http://*/*"],
+    "js": ["console.js"]
+  }],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "commands": {
+    "moveTabLeft": {
+      "description": "Move current tab left."
+    },
+    "moveTabRight": {
+      "description": "Move current tab right."
+    }
+  },
+  "permissions": [ "tabs" ]
+}
