@@ -1,15 +1,18 @@
 {
   "name": "My Chrome Helpers",
   "manifest_version": 2,
-  "version": "0.1",
+  "version": "0.2",
   "content_scripts": [{
-    "matches": ["http://*/*"],
+    "matches": ["https://*/*","http://*/*"],
     "js": ["console.js"]
   }],
   "background": {
     "scripts": ["background.js"]
   },
   "commands": {
+    "centerFocusedElement": {
+      "description": "Center focused element."
+    },
     "moveTabLeft": {
       "description": "Move current tab left."
     },
